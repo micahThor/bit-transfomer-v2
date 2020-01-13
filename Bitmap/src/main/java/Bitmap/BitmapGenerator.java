@@ -122,9 +122,9 @@ public class BitmapGenerator {
 
                 Color luigiGreen = new Color(72,173,22);
 
-                int red = (int)(currentBitColor.getRed());
-                int blue = (int)(currentBitColor.getBlue());
-                int green = (int)(currentBitColor.getGreen());
+                int red = (currentBitColor.getRed());
+                int blue = (currentBitColor.getBlue());
+                int green = (currentBitColor.getGreen());
 
                 if (red > 0 && blue < 100 && green < 100) {
                     img.setRGB(i, j, luigiGreen.getRGB());
