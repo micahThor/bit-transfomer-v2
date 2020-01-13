@@ -7,14 +7,18 @@ public class App {
 
     public static void main(String[] args) {
 
-        // get user input image path
-        String inFileName = new String(args[0]);
-        // get user input path where the altered images will be saved
-        String outFileName = new String(args[1]);
-        // get user input for what type of image mutation
-        String imageMutationType = new String(args[2]);
+        if (args.length == 3) {
+            // get user input image path
+            String inFileName = new String(args[0]);
+            // get user input path where the altered images will be saved
+            String outFileName = new String(args[1]);
+            // get user input for what type of image mutation
+            String imageMutationType = new String(args[2]);
 
-        BitmapGenerator bmpGenerator = new BitmapGenerator(inFileName, outFileName, imageMutationType);
+            BitmapGenerator bmpGenerator = new BitmapGenerator(inFileName, outFileName, imageMutationType);
+        } else {
+            System.out.println("Did not supply required arguments.\nRequired arguments: 'input file path, output file path, transform type");
+        }
     }
 
 }
